@@ -6,7 +6,6 @@ config:
 server:
   servlet:
     context-path: /vk
-  #port: 8081
 
 spring:
   application:

@@ -21,7 +21,7 @@ public class DocumentControllerImpl implements DocumentController {
     @Override
     @GetMapping("/{size}")
     public List<Document> getTop(@PathVariable int size) {
-        var response = recommenderService.getTop(new User(), 3);
+        var response = recommenderService.getTop(new User(), size);
         return response;
     }
 

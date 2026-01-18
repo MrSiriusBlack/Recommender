@@ -1,6 +1,5 @@
 package com.vk;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -21,7 +20,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-@Tag(name = "Recommendation service", description = "Сервис получения рекомендаций")
 public class RecommendationServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(RecommendationServiceApplication.class, args);
