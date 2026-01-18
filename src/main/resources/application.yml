@@ -1,0 +1,47 @@
+config:
+  datasource: jdbc:h2:mem:vkdb
+  user: sa
+  password: password
+
+server:
+  servlet:
+    context-path: /vk
+  #port: 8081
+
+spring:
+  application:
+    name: vk
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    url: ${config.datasource}
+    driver-class-name: org.h2.Driver
+    username: ${config.user}
+    password: ${config.password}
+
+  h2:
+    console:
+      enabled: true
+    path: /console
+
+  flyway:
+    enabled: true
+    url: ${config.datasource}
+    user: ${config.user}
+    password: ${config.password}
+    default-schema: migration
+    schemas: public, migration
+
+  threads:
+    virtual:
+      enabled: true
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
